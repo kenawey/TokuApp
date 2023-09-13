@@ -19,7 +19,7 @@ class NumberItem extends StatelessWidget {
           width: 100,
           color: Color(0xfffff6dc),
           child: Image.asset(
-              'assets/images/numbers/number_' + number.englishName + '.png'),
+              'assets/images/numbers/number_${number.englishName}.png'),
         ),
         Expanded(
           child: Container(
@@ -43,8 +43,8 @@ class NumberItem extends StatelessWidget {
                 IconButton(
                   onPressed: () {
                     String sourceSound =
-                        "assets/sounds/numbers/number_${number.englishName}_sound.mp3";
-                    audioPlayer.play(UrlSource(sourceSound));
+                        "sounds/numbers/number_${number.englishName}_sound.mp3";
+                    audioPlayer.play(AssetSource(sourceSound));
                   },
                   icon: Icon(Icons.play_arrow, color: Colors.white),
                 ),
