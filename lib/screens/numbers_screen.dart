@@ -72,7 +72,12 @@ class NumbersScreen extends StatelessWidget {
         backgroundColor: Color(0xff4a322b),
         title: Text("Numbers"),
       ),
-      body: ListView(
+      body: ListView.builder(
+        itemBuilder: (context, index) => NumberItem(number: numbers[index]),
+        itemCount: numbers.length,
+      ),
+
+      /*(
         children: [
           NumberItem(number: numbers.first),
           NumberItem(number: numbers[1]),
@@ -85,7 +90,7 @@ class NumbersScreen extends StatelessWidget {
           NumberItem(number: numbers[8]),
           NumberItem(number: numbers.last),
         ],
-      ),
+      ),*/
     );
   }
 }

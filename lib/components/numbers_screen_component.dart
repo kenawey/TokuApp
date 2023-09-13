@@ -1,12 +1,15 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:learnng/models/numbers.dart';
 
 class NumberItem extends StatelessWidget {
-  const NumberItem({
+  NumberItem({
     super.key,
     required this.number,
   });
   final Number number;
+
+  AudioPlayer audioPlayer = AudioPlayer();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +41,11 @@ class NumberItem extends StatelessWidget {
                 ),
                 Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    String sourceSound =
+                        "assets/sounds/numbers/number_${number.englishName}_sound.mp3";
+                    audioPlayer.play(UrlSource(sourceSound));
+                  },
                   icon: Icon(Icons.play_arrow, color: Colors.white),
                 ),
               ],
@@ -49,7 +56,7 @@ class NumberItem extends StatelessWidget {
     );
   }
 
-  Widget numberItem({
+  /*Widget numberItem({
     required String n,
     required String englishhN,
   }) {
@@ -91,4 +98,5 @@ class NumberItem extends StatelessWidget {
       ],
     );
   }
+*/
 }

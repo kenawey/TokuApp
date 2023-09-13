@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../components/home_screen_component.dart';
-import '../screens/numbers_screen.dart';
+import 'color_screen.dart';
+import 'family_screen.dart';
+import 'numbers_screen.dart';
+import 'phrases_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,17 +47,27 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           GestureDetector(
-            child: HomeItem(color: Color(0xff538033), txt: "Family Members"),
-            onTap: () {
-              /* Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return NumbersScreen();*/
-            },
-          ),
+              child: HomeItem(color: Color(0xff538033), txt: "Family Members"),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FamilyScreen()));
+              }),
+
           GestureDetector(
             child: HomeItem(color: Color(0xff7e3fa3), txt: "Colors"),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ColorScreen(),
+                )),
           ),
           GestureDetector(
             child: HomeItem(color: Color(0xff48a5cc), txt: "Phrases"),
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PhrasesScreen(),
+                )),
           ),
           // Container(
           //   width: double.infinity,
