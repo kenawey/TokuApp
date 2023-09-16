@@ -1,13 +1,13 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:learnng/models/numbers.dart';
+import 'package:learnng/models/element.dart';
 
 class NumberItem extends StatelessWidget {
   NumberItem({
     super.key,
     required this.number,
   });
-  final Number number;
+  final MyElement number;
 
   AudioPlayer audioPlayer = AudioPlayer();
 

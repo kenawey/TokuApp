@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learnng/models/element.dart';
 
 import '../components/numbers_screen_component.dart';
-import '../models/numbers.dart';
 
 class NumbersScreen extends StatelessWidget {
   const NumbersScreen({
@@ -53,17 +53,17 @@ class NumbersScreen extends StatelessWidget {
     );
   }
 */
-  final List<Number> numbers = const [
-    Number(japaniseName: '1Tsu', englishName: 'one'),
-    Number(japaniseName: 'Ni', englishName: 'two'),
-    Number(japaniseName: 'San', englishName: 'three'),
-    Number(japaniseName: 'Shi', englishName: 'four'),
-    Number(japaniseName: 'Go', englishName: 'five'),
-    Number(japaniseName: 'Roku', englishName: 'six'),
-    Number(japaniseName: 'Sebun', englishName: 'seven'),
-    Number(japaniseName: 'Hachi', englishName: 'eight'),
-    Number(japaniseName: 'Kyū', englishName: 'nine'),
-    Number(japaniseName: 'Jū', englishName: 'ten'),
+  final List<MyElement> numbers = const [
+    MyElement(japaniseName: '1Tsu', englishName: 'one'),
+    MyElement(japaniseName: 'Ni', englishName: 'two'),
+    MyElement(japaniseName: 'San', englishName: 'three'),
+    MyElement(japaniseName: 'Shi', englishName: 'four'),
+    MyElement(japaniseName: 'Go', englishName: 'five'),
+    MyElement(japaniseName: 'Roku', englishName: 'six'),
+    MyElement(japaniseName: 'Sebun', englishName: 'seven'),
+    MyElement(japaniseName: 'Hachi', englishName: 'eight'),
+    MyElement(japaniseName: 'Kyū', englishName: 'nine'),
+    MyElement(japaniseName: 'Jū', englishName: 'ten'),
   ];
   @override
   Widget build(BuildContext context) {
