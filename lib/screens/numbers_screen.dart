@@ -69,8 +69,8 @@ class NumbersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff4a322b),
-        title: Text("Numbers"),
+        backgroundColor: const Color(0xff4a322b),
+        title: const Text("Numbers"),
       ),
       body: ListView.builder(
         itemBuilder: (context, index) => NumberItem(number: numbers[index]),

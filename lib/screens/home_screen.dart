@@ -28,45 +28,48 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffff4da),
+      backgroundColor: const Color(0xfffff4da),
       appBar: AppBar(
-        backgroundColor: Color(0xff4a322b),
-        title: Text("Toku"),
+        backgroundColor: const Color(0xff4a322b),
+        title: const Text("Toku"),
       ),
       body: Column(
         children: [
           GestureDetector(
-            child: HomeItem(color: Color(0xfffa9532), txt: "Numbers"),
+            child: const HomeItem(color: Color(0xfffa9532), txt: "Numbers"),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => NumbersScreen(),
+                  builder: (context) => const NumbersScreen(),
                 ),
               );
             },
           ),
           GestureDetector(
-              child: HomeItem(color: Color(0xff538033), txt: "Family Members"),
+              child: const HomeItem(
+                  color: Color(0xff538033), txt: "Family Members"),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FamilyScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FamilyScreen()));
               }),
 
           GestureDetector(
-            child: HomeItem(color: Color(0xff7e3fa3), txt: "Colors"),
+            child: const HomeItem(color: Color(0xff7e3fa3), txt: "Colors"),
             onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ColorScreen(),
+                  builder: (context) => const ColorScreen(),
                 )),
           ),
           GestureDetector(
-            child: HomeItem(color: Color(0xff48a5cc), txt: "Phrases"),
+            child: const HomeItem(color: Color(0xff48a5cc), txt: "Phrases"),
             onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => PhrasesScreen(),
+                  builder: (context) => const PhrasesScreen(),
                 )),
           ),
           // Container(

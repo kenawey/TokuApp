@@ -21,8 +21,8 @@ class PhrasesScreen extends StatelessWidget {
     ];
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff4a322b),
-          title: Text("Colors "),
+          backgroundColor: const Color(0xff4a322b),
+          title: const Text("Colors "),
         ),
         body: ListView.builder(
           itemCount: items.length,

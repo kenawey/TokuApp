@@ -13,9 +13,9 @@ class PhraseItem extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             height: 100,
-            color: Color(0xff48a5cc),
+            color: const Color(0xff48a5cc),
             child: Row(
               children: [
                 Column(
@@ -23,20 +23,21 @@ class PhraseItem extends StatelessWidget {
                   children: [
                     Text(
                       phrase.japaniseName,
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: const TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Text(phrase.englishName,
-                        style: TextStyle(color: Colors.white, fontSize: 16))
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 16))
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
                   onPressed: () {
                     String sourceSound =
                         "sounds/phrases/${phrase.englishName}.wav";
                     audioPlayer.play(AssetSource(sourceSound));
                   },
-                  icon: Icon(Icons.play_arrow, color: Colors.white),
+                  icon: const Icon(Icons.play_arrow, color: Colors.white),
                 ),
               ],
             ),
@@ -44,6 +45,5 @@ class PhraseItem extends StatelessWidget {
         )
       ],
     );
-    ;
   }
 }

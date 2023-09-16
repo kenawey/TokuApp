@@ -13,15 +13,15 @@ class FamilyItem extends StatelessWidget {
       children: [
         Container(
             width: 100,
-            color: Color(0xff538033),
+            color: const Color(0xff538033),
             child: Image.asset(
               'assets/images/family_members/family_${member.englishName}.png',
             )),
         Expanded(
           child: Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             height: 100,
-            color: Color(0xff538033),
+            color: const Color(0xff538033),
             child: Row(
               children: [
                 Column(
@@ -29,20 +29,21 @@ class FamilyItem extends StatelessWidget {
                   children: [
                     Text(
                       member.japaniseName,
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                      style: const TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Text(member.englishName,
-                        style: TextStyle(color: Colors.white, fontSize: 16))
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 16))
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
                   onPressed: () {
                     String sourceSound =
                         "sounds/family_members/${member.englishName}.wav";
                     audioPlayer.play(AssetSource(sourceSound));
                   },
-                  icon: Icon(Icons.play_arrow, color: Colors.white),
+                  icon: const Icon(Icons.play_arrow, color: Colors.white),
                 ),
               ],
             ),
@@ -50,6 +51,5 @@ class FamilyItem extends StatelessWidget {
         )
       ],
     );
-    ;
   }
 }
